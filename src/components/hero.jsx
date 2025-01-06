@@ -4,7 +4,7 @@ export function Hero (){
     return(
         <div className='grid grid-cols-2 mt-5'>
             <div className=' font-semibold max-w-xl mt-5 ' >
-                <p className='text-5xl pl-16 py-6 '>A simple Bookmark Manger</p >
+                <p className='font-bold text-5xl pl-16 py-6 '>A Simple Bookmark Manger</p >
                 <p className='text-slate-400 text-2xl pl-16 py-6 text-wrap'>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
                 <div className='flex px-16 gap-5 mt-2'>
                     <button className='bg-indigo-500 text-white p-3 rounded shadow-md'>Get It On Chrome</button>
