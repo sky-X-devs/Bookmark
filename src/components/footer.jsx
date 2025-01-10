@@ -11,11 +11,7 @@ export function Footer(){
                 <button className="text-white bg-red-500 p-3 rounded-xl">Contact Us</button>
             </label>
         </div>
-        <div className="bg-indigo-950 w-full h-36">
-            <div>
-                <img src={bookMarklogo} alt={bookMarklogo} className='' />
-                    
-            </div>
+        
             </div>
         </div>
     )
