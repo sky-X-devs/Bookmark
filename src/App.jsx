@@ -11,6 +11,7 @@ const NAVIGATION_ITEMS = [
   { id: 'downloads', label: 'DOWNLOAD', Component: Download },
   { id: 'faq', label: 'FAQ', Component: FAQ }
 ];
+const [navtoggle, setNavToggle] = useState(false);
 
 export default function App() {
   const refs = {
@@ -35,6 +36,7 @@ export default function App() {
               key={id}
               onClick={() => handleScroll(id)}
               className="text-gray-400 hover:text-red-400 transition-colors"  >
+              
               {label}
             </button>
           ))}
