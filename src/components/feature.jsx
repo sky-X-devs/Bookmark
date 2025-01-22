@@ -17,42 +17,46 @@ export function Feature (){
 
     return(
         <div>
-            <div className=" text-center mb-16">
-                <p className=" font-bold text-6xl py-8">Feature</p>
-                <p className="text-pretty">Our aim is to make it quick and easy for you to access your </p>
+            <div className=" text-center mb-16 ">
+                <p className=" font-bold text-3xl md:text-6xl py-8">Feature</p>
+                <p className="text-pretty text-slate-800">Our aim is to make it quick and easy for you to access your </p>
                 <p> favourite websites. Your bookmarks sync between your</p>
                 <p>devices so you can access them on the go.</p>
             </div>
-            <div className="flex justify-center">
-                <div className=" absolute w-[500px] flex justify-between font-semibold text-slate-500 ">
-                    <button className="hover:text-red-400 hover:underline hover:underline-offset-8"onClick={()=>{setIndex(0)}} >Simple Bookmarking</button>
-                    <button className="hover:text-red-400 hover:underline hover:underline-offset-8"onClick={()=>{setIndex(1)}} >Speedy Searching</button>
-                    <button className="hover:text-red-400 hover:underline hover:underline-offset-8"onClick={()=>{setIndex(2 )}}>Easy Sharing</button>
+            <div className="flex justify-center ">
+                <div className=" md:absolute w-[500px] grid md:grid-cols-3 grid-rows-3 font-semibold text-slate-500 space-y-2 ">
+                    <button className="hover:text-red-400 hover:underline underline underline-offset-8 "onClick={()=>{setIndex(0)}} >Simple Bookmarking</button>
+                    <button className="hover:text-red-400 hover:underline underline underline-offset-8"onClick={()=>{setIndex(1)}} >Speedy Searching</button>
+                    <button className="hover:text-red-400 hover:underline underline underline-offset-8"onClick={()=>{setIndex(2 )}}>Easy Sharing</button>
                 </div>
             </div>
-            <div className="relative w-[535px] bg-slate-200 h-0.5 mb-10 mt-10 flex ml-[500px]"></div>
-                <TabData  featureTab= {featureTab[index]}/>
+                    
+            <TabData  featureTab= {featureTab[index]}/>
         </div>  
     ) 
 }
 function TabData ({featureTab}){
         
-    console.log('tabdata is called ');
-    console.log(featureTab);
+    
     return(
-        <div className="flex" >
-            <div className=' bg-indigo-500 text-4xl w-[600px] h-64 rounded-r-full mt-48 '></div>        
-                <div className="absolute">
-                    <img className=' ml-48 mt-0' src={featureTab.image} alt={image1} />
+        <div className="grid grid-span-rows-2  md:grid-cols-2 md:space-y-20 space-y-5" >   
+            <div className=' hidden md:block bg-indigo-500 text-4xl w-[600px] h-64 rounded-r-full md:mt-64  '></div>        
+                <div className="md:absolute flex justify-center md:ml-32 ">    
+                    <img className=' ' src={featureTab.image} alt={image1} />
                 </div>     
-                <div className="ml-48" >
-                    <p className="font-semibold text-4xl ">{featureTab.title}</p>
-                    <p className="w-[450px] mt-8 text-slate-400">{featureTab.description}</p>
-                    <button className="bg-indigo-500 rounded px-5 py-3 my-8 font-bold text-white border-2 border-indigo-500 hover:text-indigo-500 hover:bg-white hover:border-indigo-500 hover:border-solid">
-                        More Info   
-                    </button>
+                <div className=" md:w-[450px] space-y-5 " > 
+                    <p className="font-semibold text-4xl text-center ">{featureTab.title}</p>
+                    <div className=" w-96 md:w-[450px] ml-48 md:ml-0">
+                        <p className="pretty text-center text-slate-400">{featureTab.description}</p>
+                    </div>    
+                    <div className="flex justify-center">
+                        <button className="bg-indigo-500 rounded  px-5 py-3 my-8 font-bold text-white border-2 border-indigo-500 hover:text-indigo-500 hover:bg-white hover:border-indigo-500 hover:border-solid">
+                            More Info   
+                        </button>
+                    </div>
                 </div>       
             
         </div>
     )
 }
+
